@@ -1,0 +1,15 @@
+name: hello-world
+
+# This workflow triggers when a push is made to the repository
+on: push
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest  # Specifies the environment for the job (Linux)
+
+    steps:
+      - name: Checkout code  # A step that checks out your repository's code
+        uses: actions/checkout@v3
+
+      - name: Run Hello World  # A step to execute a shell command
+        run: echo "Hello World!"
